@@ -83,13 +83,10 @@ sbtのインストールは、Windowsの場合、[chocolatey](https://chocolatey
     # sbtインストール
     > choco install sbt
     ```
-- 無事インストールされたら、通常権限でPowerShellかコマンドプロンプトを起動
+- 無事インストールされたら、`./`ディレクトリでPowerShellかコマンドプロンプトを起動
     ```bash
     # ScalaをREPL（Read Eval Print Loop）モードで起動
     > sbt console
-
-    ## => projectディレクトリがないと言われるが続行する
-    ## ? 「c」と打ってエンター
 
      : (略)
     [info] Starting scala interpreter...
@@ -99,3 +96,6 @@ sbtのインストールは、Windowsの場合、[chocolatey](https://chocolatey
     # 無事起動したら終了
     scala> :quit
     ```
+    - ※ `project`ディレクトリがないディレクトリで `sbt console` を実行しようとすると「projectディレクトリがない」という旨の警告が出る
+        - => 「c」と打ってcontinueすれば、自動的に`project`ディレクトリが作成される
+

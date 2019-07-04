@@ -234,7 +234,7 @@ sbt管理下のScalaプログラムはREPLから呼び出すことが可能
     }
     ```
 - ディレクトリ構成
-    ```python
+    ```conf
     sandbox/
      |- project/
      |- target/

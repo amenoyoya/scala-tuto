@@ -82,11 +82,14 @@ sbtのインストールは、Windowsの場合、[chocolatey](https://chocolatey
 
     # sbtインストール
     > choco install sbt
+    ## => Do you want to run the script? というプロンプトに対しては「A」(All)と打ってOK
     ```
 - 無事インストールされたら、`./`ディレクトリでPowerShellかコマンドプロンプトを起動
     ```bash
     # ScalaをREPL（Read Eval Print Loop）モードで起動
     > sbt console
+
+    ## => 初回起動時は環境構築のため少し時間がかかる
 
      : (略)
     [info] Starting scala interpreter...

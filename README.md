@@ -102,3 +102,8 @@ sbtのインストールは、Windowsの場合、[chocolatey](https://chocolatey
     - ※ `project`ディレクトリがないディレクトリで `sbt console` を実行しようとすると「projectディレクトリがない」という旨の警告が出る
         - => 「c」と打ってcontinueすれば、自動的に`project`ディレクトリが作成される
 
+***
+
+## Scalaの基本
+
+See [Scalaの基本.md](./Scalaの基本.md)

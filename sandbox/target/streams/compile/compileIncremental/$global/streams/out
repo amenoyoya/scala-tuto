@@ -3,21 +3,21 @@
 [0m[[0m[0mdebug[0m] [0m[0m	removed:Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	added: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	modified: Set(C:\App\GitHub\scala-tuto\sandbox\User.scala)[0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set(C:\App\GitHub\scala-tuto\sandbox\target\scala-2.12\classes\HelloWorld$.class, C:\App\GitHub\scala-tuto\sandbox\target\scala-2.12\classes\HelloWorld.class, C:\App\GitHub\scala-tuto\sandbox\target\scala-2.12\classes\User$.class, C:\App\GitHub\scala-tuto\sandbox\target\scala-2.12\classes\User.class)[0m
 [0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(User)[0m
 [0m[[0m[0mdebug[0m] [0m[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	product: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	product: Set(C:\App\GitHub\scala-tuto\sandbox\HelloWorld.scala, C:\App\GitHub\scala-tuto\sandbox\User.scala)[0m
 [0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(User)[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(C:\App\GitHub\scala-tuto\sandbox\User.scala)[0m
-[0m[[0m[0minfo[0m] [0m[0mCompiling 1 Scala source to C:\App\GitHub\scala-tuto\sandbox\target\scala-2.12\classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll sources are invalidated.[0m
+[0m[[0m[0mdebug[0m] [0m[0mRecompiling all 2 sources: invalidated sources (2) exceeded 50.0% of all sources[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 2 Scala sources to C:\App\GitHub\scala-tuto\sandbox\target\scala-2.12\classes ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.2.5:compile for Scala 2.12.7[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.2.5:compile for Scala 2.12.7[0m
-[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 705bfec0 for Scala compiler version 2.12.7[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 51a412f2 for Scala compiler version 2.12.7[0m
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-deprecation[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-feature[0m
@@ -27,20 +27,5 @@
 [0m[[0m[0mdebug[0m] [0m[0m	C:\Users\user\.sbt\boot\scala-2.12.7\lib\scala-library.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	C:\App\GitHub\scala-tuto\sandbox\target\scala-2.12\classes[0m
-[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 0.935805458 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 0.915910566 s[0m
 [0m[[0m[0minfo[0m] [0m[0mDone compiling.[0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from User...[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set(User)[0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(User)[0m
-[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(User,ModifiedNames(changes = UsedName(print,[Default]), UsedName(printUser,[Default]))) invalidates 1 classes due to The User has the following regular definitions changed:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	UsedName(print,[Default]), UsedName(printUser,[Default]).[0m
-[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(User)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	> [0m
-[0m[[0m[0mdebug[0m] [0m[0m	> [0m
-[0m[[0m[0mdebug[0m] [0m[0m        [0m
-[0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll newly invalidated classes after taking into account (previously) recompiled classes:Set()[0m

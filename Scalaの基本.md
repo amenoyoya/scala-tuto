@@ -254,7 +254,7 @@ sbt管理下のScalaプログラムはREPLから呼び出すことが可能
 
     # call User.print
     > User.print(user)
-    yoya: 31際
+    yoya: 31歳
 
     # REPL終了
     > :quit

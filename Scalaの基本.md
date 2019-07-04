@@ -200,6 +200,7 @@ res6: 4
 - sbtプロンプト上でコマンドが打てるようになるため、HelloWorldプログラムを実行するために`run`コマンドを実行
     ```bash
     # コンパイル・実行
+    ## runコマンドは、mainメソッドを持つオブジェクトを探して実行する
     > run
 
     ## => コンパイルが実行される
@@ -210,4 +211,51 @@ res6: 4
     
     # sbtプロンプト終了
     > exit
+    ```
+
+***
+
+## REPLからScalaプログラム呼び出し
+
+sbt管理下のScalaプログラムはREPLから呼び出すことが可能
+
+- **sandbox/User.scala**
+    ```scala
+    /*
+      名前と年齢を持つ Userクラス定義
+    */
+    class User(val name: String, val age: Int)    
+
+    /*
+      Userの名前と年齢を出力する printメソッドを持つ Userオブジェクト定義
+    */
+    object User {
+      def print(user: User) = println(user.name + ": " + user.age + "歳")
+    }
+    ```
+- ディレクトリ構成
+    ```python
+    sandbox/
+     |- project/
+     |- target/
+     |- build.sbt        # ビルド設定
+     |- HelloWorld.scala # "Hello, World!"出力プログラム
+     `- User.scala       # Userクラス・オブジェクト定義
+    ```
+- REPLを起動し、Userを使ってみる
+    ```bash
+    # sandboxディレクトリでREPL起動
+    $ cd sandbox
+    $ sbt console
+
+    # new User: name => "yoya", age => 31
+    > val user = new User("yoya", 31)
+    user: User = User@4c6fdb55
+
+    # call User.print
+    > User.print(user)
+    yoya: 31際
+
+    # REPL終了
+    > :quit
     ```

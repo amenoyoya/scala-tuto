@@ -142,3 +142,72 @@ res6: 4
 
     ## => 18％
     ```
+
+***
+
+## Scalaプログラムのコンパイル・実行
+
+### Scalaプログラムの作成
+ここでは`sandbox`ディレクトリにコードを作成することにする
+
+なお、Scalaのインデント幅はスペース2つ分が推奨値である
+
+参考: [Scalaスタイルガイド](http://yanana.github.io/scala-style/)
+
+- **sandbox/HelloWorld.scala**
+    ```scala
+    /*
+      "Hello, World!"を出力するプログラム
+    */
+    object HelloWorld {
+      def main(args: Array[String]): Unit = {
+        println("Hello, World!");
+      }
+    }
+    ```
+
+---
+
+### ビルド設定ファイルの作成
+コンパイルオプション等を記述する
+
+- **sandobox/build.sbt**
+    ```scala
+    /*
+      Scalaのバージョンを指定
+      バージョンは `sbt console` で REPLを起動した時に表示される
+    */
+    scalaVersion := "2.12.7"
+    
+    /*
+      コンパイルオプションを追加
+      - deprecation: 今後廃止予定のAPIを使用する
+      - feature: 明示的に仕様を宣言する必要のある機能を使用する
+      - unchecked: パターンマッチが有効に機能しない場合に指定
+      - Xlint: 推奨する書き方などの情報を出力
+    */
+    scalacOptions ++= Seq("-deprecation", "-feature", "-unchecked", "-Xlint")
+    ```
+
+---
+
+### コンパイル＆実行
+- `sandbox`ディレクトリに入り`sbt`を起動する
+    ```bash
+    $ cd sandbox
+    $ sbt
+    ```
+- sbtプロンプト上でコマンドが打てるようになるため、HelloWorldプログラムを実行するために`run`コマンドを実行
+    ```bash
+    # コンパイル・実行
+    > run
+
+    ## => コンパイルが実行される
+    ## ～略～
+    [info] Done packaging.
+    [info] Running HelloWorld
+    Hello, World!
+    
+    # sbtプロンプト終了
+    > exit
+    ```

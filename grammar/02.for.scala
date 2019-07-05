@@ -72,3 +72,22 @@ for (e <- List("apple", "banana", "chocolate")) println(e)
   => scala.collection: <加工済みのコレクション>
   ```
 */
+for (e <- List("A", "B", "C")) yield "Pre" + e
+/* <REPL>
+  res: List[String] = List(PreA, PreB, PreC)
+*/
+
+
+/* <practice>
+  - 変数:
+    - a: Integer = Range 1 to 100
+    - b: Integer = Range 1 to 100
+    - c: Integer = Range 1 to 100
+  - 出力:
+    - a, b, c の三辺からなる三角形が直角三角形になる組み合わせ
+      - 直角三角形の条件（ピタゴラスの定理）: a^2 == b^2 + c^2
+        - Scalaにおける二乗表現: (Math.pow '(' <値> ',' 2 ')')|(<値> '*' <値>)
+*/
+for (a <- 1 to 100; b <- 1 to 100; c <- 1 to 100 if a*a == b*b + c*c) {
+  println((a, b, c))
+}

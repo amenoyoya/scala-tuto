@@ -88,3 +88,77 @@ lst match {
   List(B, C)
 */
 
+
+/* 中置パターン
+  ```
+  <リストの最初の要素> :: <リストの次の要素> :: ...
+  ```
+*/
+val lst = List("A", "B", "C")
+// 以下のパターンマッチングを中置パターンで書くことが可能
+lst match {
+  case List("A", b, c) => {
+    println("b = " + b)
+    println("c = " + c)
+  }
+  case _ => println("nothing")
+}
+
+// 上記を中置パターンで書くと以下のようになる
+lst match {
+  case "A" :: b :: c :: _ => {
+    println("b = " + b)
+    println("c = " + c)
+  }
+  case _ => println("nothing")
+}
+/*
+  中置パターンでは、'::'の後ろの要素はリストの残り全てを示すため、リストの末尾を無視するためには、パターンの最後に'_'を挿入する必要がある
+  なお、上記の例で ("A" :: b :: c) というパターン式を書くと
+  ```
+  b = B
+  c = List(C)  // 期待した出力は c = C
+  ```
+  という出力になってしまう
+*/
+
+
+/* 型になるパターンマッチング
+  対象が特定の型に所属しているかマッチングすることも可能
+  ```
+  <変数名> : <型>
+  ```
+*/
+val obj: AnyRef = "hoge"
+
+obj match {
+  case v: java.lang.Integer => println("obj is Integer")
+  case v: java.lang.String => println("obj is String")
+}
+/* <REPL>
+  obj: AnyRef = hoge
+  obj is String
+*/
+
+
+/* <practice>
+  - 使用関数:
+    - new scala.util.Random(new java.security.SecureRandom()).alphanumeric.take(5).toList
+      - ランダムな5個の文字（Char型）のリストを返す
+  - 出力:
+    - 以下の条件を満たすランダムなアルファベット5文字を100回出力
+      - 条件: 最後の文字と最後の文字が同じ
+      - ただし: 生成されたリストの一部だけ利用することを許可する
+        - 例) List(a, b, c, d, e) を List(a, b, c, d, a) とすることを許可する
+*/
+// 100回繰り返す
+for (i <- 1 to 100) {
+  // ランダムな5個のアルファベットから成るリストに対してパターンマッチング
+  // => パターンマッチングの評価結果が lst に代入される
+  val lst = new scala.util.Random(new java.security.SecureRandom()).alphanumeric.take(5).toList match {
+    // 5個の要素から成るリストにマッチング
+    // => 最初の要素で最後の要素を置換したリストを返す
+    case List(a, b, c, d, _) => List(a, b, c, d, a)
+  }
+  println(lst)
+}

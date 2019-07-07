@@ -4,6 +4,8 @@
 
 [Ruby->Go->Scalaという習得順序がエンジニアの爆速の成長に最適である理由](https://qiita.com/poly_soft/items/1feaa1ec5ecab08dc6db)に触発されてScalaに入門することにした、その備忘録
 
+入門教材として[ドワンゴの研修資料](http://dwango.github.io/scala_text/)を拝借（感謝）
+
 ### 現時点のスキルセット（2019/07/03）
 - Webプログラマ歴: 3か月
 - プログラミングスキル:

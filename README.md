@@ -121,3 +121,8 @@ See [構文記法.md](./構文記法.md)
 
 ### Scalaの構文
 Sample codes in [grammar](./grammar) directory
+
+---
+
+### ソフトウェアテスト
+See [ScalaTest.md](./ScalaTest.md)

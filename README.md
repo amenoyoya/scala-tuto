@@ -1,5 +1,7 @@
 # Scala｜入門
 
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />この 作品 は <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">クリエイティブ・コモンズ 表示 - 非営利 4.0 国際 ライセンス</a>の下に提供されています。
+
 ## What's this?
 
 [Ruby->Go->Scalaという習得順序がエンジニアの爆速の成長に最適である理由](https://qiita.com/poly_soft/items/1feaa1ec5ecab08dc6db)に触発されてScalaに入門することにした、その備忘録

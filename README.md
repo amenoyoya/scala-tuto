@@ -37,12 +37,13 @@
 ### Environment
 - OS:
     - Windows 10 x64
-- Editor:
-    - VSCode: `1.35.1`
+    - Ubuntu 18.04 LTS
 
 ---
 
-### Javaのインストール
+### Setup on Windows
+
+#### Javaのインストール
 ScalaはJavaVM上で動作するため、まずJavaSDKをインストールする
 
 OracleJDKはライセンスが厳しくなったらしいので、今回はオープンソースのOpenJDKを採用する（Java界隈のことは全く分からない。。。）
@@ -66,9 +67,7 @@ OracleJDKはライセンスが厳しくなったらしいので、今回はオ�
     javac 12.0.1
     ```
 
----
-
-### Scalaインストール
+#### Scalaインストール
 一般に、Scalaプログラムを手動でコンパイルすることは稀で、標準的なビルドツールであるsbt（Scala Buid Tool）を用いることが多い
 
 sbtのインストールは、Windowsの場合、[chocolatey](https://chocolatey.org/)（Windows用パッケージマネージャ）を使うと楽
@@ -103,6 +102,43 @@ sbtのインストールは、Windowsの場合、[chocolatey](https://chocolatey
     ```
     - ※ `project`ディレクトリがないディレクトリで `sbt console` を実行しようとすると「projectディレクトリがない」という旨の警告が出る
         - => 「c」と打ってcontinueすれば、自動的に`project`ディレクトリが作成される
+
+---
+
+### Setup on Ubuntu 18.04 LTS
+```bash
+# OpenJDK 11 のインストール
+$ sudo apt install openjdk-11-jdk
+
+# Javaバージョン確認
+$ java -version
+openjdk version "11.0.3" 2019-04-16
+OpenJDK Runtime Environment (build 11.0.3+7-Ubuntu-1ubuntu218.04.1)
+OpenJDK 64-Bit Server VM (build 11.0.3+7-Ubuntu-1ubuntu218.04.1, mixed mode, sharing)
+
+# Javaコンパイラのバージョン確認
+$ javac -version
+javac 11.0.3
+
+# sbtインストール
+## 公式サイトを参考に: https://www.scala-sbt.org/download.html
+$ echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
+$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2EE0EA64E40A89B84B2DF73499E82A75642AC823
+$ sudo apt update && sudo apt install sbt
+
+# ScalaをREPL（Read Eval Print Loop）モードで起動
+$ sbt console
+
+## => 初回起動時は環境構築のため少し時間がかかる
+
+ : (略)
+[info] Starting scala interpreter...
+Welcome to Scala 2.12.7 (OpenJDK 64-Bit Server VM, Java 12.0.1).
+Type in expressions for evaluation. Or try :help.
+
+# 無事起動したら終了
+scala> :quit
+```
 
 ***
 
